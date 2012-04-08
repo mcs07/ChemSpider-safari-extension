@@ -26,7 +26,7 @@
 				<key>Identifier</key>
 				<string>chemspider</string>
 				<key>Title</key>
-				<string>ChemSpider Search</string>
+				<string>Refresh to use ChemSpider search</string>
 			</dict>
 		</array>
 		<key>Global Page</key>
