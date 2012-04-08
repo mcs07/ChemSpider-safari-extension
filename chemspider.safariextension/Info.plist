@@ -4,10 +4,12 @@
 <dict>
 	<key>Author</key>
 	<string>Matt Swain</string>
+	<key>Builder Version</key>
+	<string>7536.2.3</string>
 	<key>CFBundleDisplayName</key>
 	<string>ChemSpider Search</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.macosxtips.chemspider</string>
+	<string>com.matt-swain.chemspider</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
@@ -36,7 +38,12 @@
 		<dict>
 			<key>End</key>
 			<array>
-				<string>chemspider.js</string>
+				<string>js/injected.js</string>
+			</array>
+			<key>Start</key>
+			<array>
+				<string>js/jquery-1.7.1.min.js</string>
+				<string>js/jquery-ui-1.8.13.custom.min.js</string>
 			</array>
 		</dict>
 	</dict>
@@ -55,8 +62,8 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://www.macosxtips.co.uk/extensions/chemspider.plist</string>
+	<string>http://assets.matt-swain.com/extensions/chemspider.plist</string>
 	<key>Website</key>
-	<string>http://www.macosxtips.co.uk/extensions</string>
+	<string>http://matt-swain.com/extensions</string>
 </dict>
 </plist>
