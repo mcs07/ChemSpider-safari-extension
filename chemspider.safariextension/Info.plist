@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>Matt Swain</string>
 	<key>Builder Version</key>
-	<string>7536.2.3</string>
+	<string>9537.73.11</string>
 	<key>CFBundleDisplayName</key>
 	<string>ChemSpider Search</string>
 	<key>CFBundleIdentifier</key>
@@ -38,12 +38,9 @@
 		<dict>
 			<key>End</key>
 			<array>
+				<string>js/jquery-2.0.3.min.js</string>
+				<string>js/jquery.scrollTo.min.js</string>
 				<string>js/injected.js</string>
-			</array>
-			<key>Start</key>
-			<array>
-				<string>js/jquery-1.7.1.min.js</string>
-				<string>js/jquery-ui-1.8.13.custom.min.js</string>
 			</array>
 		</dict>
 	</dict>
