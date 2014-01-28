@@ -59,13 +59,13 @@ function displayResult(msg) {
                     location.href = 'http://www.chemspider.com/FilesHandler.ashx?type=str&id='+result.cid;
                 });
                 view.click(function() {
-                    location.href = 'http://www.chemspider.com/Chemical-Structure.'+result.cid+'.html';
+                    safari.self.tab.dispatchMessage('viewCompound', result.cid);
                 }); 
 			    $('<div class="cssse-mol" />').append(img).append(save).append(view).append(cap).appendTo(slider);
 		    });
 		    slider.hide().appendTo(dialog);
-		    dialog.animate({height: slider.height()+36}, 500, function () {
-		        slider.fadeIn(500);
+		    dialog.animate({height: slider.height()+36}, 300, function () {
+		        slider.fadeIn(300);
             });
 		    if (msg.results.length > 1) {
 		        $('<button type="button" class="cssse-next cssse-arrow">⟩</button>').click(function() {

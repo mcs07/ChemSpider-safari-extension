@@ -47,7 +47,30 @@ function validateCommand(e) {
     e.target.title = 'Search for "'+selection+'" on ChemSpider'; 
 }
 
-const app = safari.application;
+function handleMessage(msg) {
+	if (msg.name === 'viewCompound') {
+		var url = 'http://www.chemspider.com/Chemical-Structure.'+msg.message+'.html';
+		switch (ext.settings.resultsType) {
+		case 'foreground':
+			app.activeBrowserWindow.openTab('foreground').url = url;
+			break;
+		case 'background':
+			app.activeBrowserWindow.openTab('background').url = url;
+			break;
+		case 'new':
+			app.openBrowserWindow();
+			app.activeBrowserWindow.activeTab.url = url;
+			break;
+		case 'current':
+			app.activeBrowserWindow.activeTab.url = url;
+			break;
+		}
+	}
+}
+
+const app = safari.application,
+      ext  = safari.extension;
 var cidpattern = /\/Chemical-Structure\.(\d+)\.html/
 app.addEventListener('command', performCommand, false);
 app.addEventListener('validate', validateCommand, false);
+app.addEventListener('message', handleMessage, false);
