@@ -44,7 +44,7 @@ function validateCommand(e) {
     if (selection.length > 25) {
         selection = selection.substr(0, 25).replace(/^\s+|\s+$/g,'') + '...';
     }
-    e.target.title = 'Search for "'+selection+'" on ChemSpider'; 
+    e.target.title = 'Search for "'+selection+'" on ChemSpider';
 }
 
 function handleMessage(msg) {

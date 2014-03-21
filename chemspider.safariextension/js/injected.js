@@ -12,8 +12,7 @@ function handleContextMenu(e) {
 }
 
 function handleMessage(msg) {
-    if (window !== window.top) 
-        return
+    if (window !== window.top) return;
     if (msg.name === 'showLoading') {
         showLoading(msg.message);
     } else if (msg.name === 'searchResults') {
@@ -60,7 +59,7 @@ function displayResult(msg) {
                 });
                 view.click(function() {
                     safari.self.tab.dispatchMessage('viewCompound', result.cid);
-                }); 
+                });
 			    $('<div class="cssse-mol" />').append(img).append(save).append(view).append(cap).appendTo(slider);
 		    });
 		    slider.hide().appendTo(dialog);
@@ -72,7 +71,6 @@ function displayResult(msg) {
 		            $('.cssse-slider', $(this).parent()).scrollTo({top:0, left:'+=175'}, 400);
 		        }).appendTo(dialog);
 		    }
-		    
         }
     });
 }
